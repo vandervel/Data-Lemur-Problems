@@ -1,7 +1,11 @@
 /* get the year-over-year growth rate for each product sold. Year-over-year
 growth rate is calculated by the following formula:
     (current year's spending - previous year's spending / previous year's spending) * 100
-*/
+
+This query utilizes a CTE (common table expression). The object 'yearly_spend' is a 
+table with the total spending for each product for the previous year, in addition to the
+total spending for each product for the current year. This table is then queried by the
+the query below it to return the desired results. */
 
 
 with yearly_spend as (
